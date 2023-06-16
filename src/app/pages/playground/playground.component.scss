@@ -1,0 +1,14 @@
+:host {
+    nz-card {
+        min-height:  300px;
+    }
+
+    .result {
+        white-space: break-spaces;
+        overflow-x: scroll;
+        background-color: #80808024;
+        border-radius: 5px;
+        padding: 5px;
+        min-height: 50px;
+    }
+}

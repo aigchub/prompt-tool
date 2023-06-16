@@ -1,0 +1,23 @@
+<nz-segmented [nzOptions]="cateOptions" (nzValueChange)="cateChange($event)"></nz-segmented>
+<nz-divider></nz-divider>
+<nz-segmented [nzOptions]="currentSolution" (nzValueChange)="solutionChange($event)"></nz-segmented>
+
+<nz-divider></nz-divider>
+<div nz-row [nzGutter]="16">
+    <div nz-col nzSpan="12">
+        <nz-card nzTitle="输入">
+            <textarea nz-input [(ngModel)]="content" placeholder="提交内容" [nzAutosize]="{ minRows: 3, maxRows: 5 }"></textarea>
+            <div style="margin-top: 8px;"></div>
+            <button nz-button (click)="submit()" [nzLoading]="loadResult"  nzType="primary">提交</button>
+        </nz-card>
+
+    </div>
+    <div nz-col nzSpan="12">
+        <nz-card nzTitle="结果">
+            <nz-spin [nzSpinning]="loadResult">
+                <div class="result" [innerHTML]="result">
+                </div>
+            </nz-spin>
+        </nz-card>
+    </div>
+</div>
